@@ -10,8 +10,6 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/glide.min.css">
-    <link rel="stylesheet" href="assets/css/glide-theme.min.css">
     <title>One Page</title>
 </head>
 
@@ -31,8 +29,7 @@
         </nav>
         <nav class="mobile-main-nav">
             <img src="assets/img/logo-dark.png">
-            <button onclick="document.querySelector('#main-menu').classList.toggle('opened')"><i
-                    class="fas fa-bars"></i></button>
+            <button onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
             <div id="main-menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -112,49 +109,49 @@
         </div>
     </section>
     <section id="products">
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/1.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
             </div>
         </div>
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/2.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
             </div>
         </div>
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/3.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
             </div>
         </div>
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/4.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
             </div>
         </div>
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/5.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
             </div>
         </div>
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/7.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
             </div>
         </div>
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/6.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
             </div>
         </div>
-        <div>
+        <div onclick="openModal()">
             <img src="assets/img/products/8.jpg">
             <div class="hover">
                 <img src="assets/img/eye.png">
@@ -218,28 +215,20 @@
             <span>Be set fourth land god darkness make it wherein own</span>
         </div>
     </section>
-    <section id="testimonials" class="glide">
-        <div data-glide-el="track" class="glide__track">
-            <ul class="glide__slides">
-                <li class="glide__slide">
-                    "Website has got everything I need. Website is awesome! I'm good to go. "
-                    <div class="signature">Natalina D.</div>
-                </li>
-                <li class="glide__slide">
+    <section id="testimonials">
+        <div>
+            <ul class="slides">
+                <li class="slide">
                     "You won't regret it. This is simply unbelievable! I will recommend you to my colleagues. I will let
                     my mum know about this, she could really make use of service!"
                     <div class="signature">Siobhan G.</div>
                 </li>
-                <li class="glide__slide">
-                    "Service impressed me on multiple levels. You guys rock! Since I invested in service I made over
-                    100,000 dollars profits. Needless to say we are extremely satisfied with the results."
-                    <div class="signature">Jinny F.</div>
-                </li>
             </ul>
-        </div>
-        <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+            <ul class="dots">
+                <li><button><i class="far fa-circle"></i></button></li>
+                <li class="active"><button><i class="fas fa-circle"></i></button></li>
+                <li><button><i class="far fa-circle"></i></button></li>
+            </ul>
         </div>
     </section>
     <section id="clients">
@@ -304,10 +293,30 @@
             </ul>
         </div>
     </footer>
-    <script type="text/javascript" src="./js/glide.min.js"></script>
-    <script>
-        new Glide('#testimonials').mount()
-    </script>
+    <div class="overlay"></div>
+    <div id="details-modal" class="modal">
+        <div class="title">
+            <h3>Product details</h3>
+            <button onclick="closeModal()" class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="content">
+            <div class="image">
+                <img src="assets/img/products/3.jpg">
+            </div>
+            <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra nunc tincidunt arcu molestie, sit
+                amet cursus sem egestas. Vestibulum lectus neque, vestibulum vitae justo sed, eleifend molestie nisi.
+                Aenean laoreet velit quis est tincidunt egestas. Etiam sagittis hendrerit ex, vitae pretium turpis
+                eleifend eget. Morbi pharetra rhoncus dui. Etiam et molestie mi, cursus interdum ipsum. Cras arcu dui,
+                bibendum vel posuere at, feugiat vitae ex. Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Proin finibus augue quis euismod pharetra. Nam non ultricies eros, vitae
+                tincidunt sapien. Pellentesque posuere dapibus nibh, eu volutpat odio imperdiet in.
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
