@@ -1,0 +1,93 @@
+@import '_variables.scss';
+
+nav {
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    ul {
+        display: flex;
+
+        li a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            color: $text;
+
+            &:hover {
+                color: $textActive;
+            }
+        }
+    }
+}
+
+.main-nav {
+    @media (min-width: 1024px) {
+        display: flex;
+    }
+    display: none;
+    
+    ul {
+        flex-direction: row;
+        justify-content: right;
+
+        li {
+            padding: 0 0.5rem;
+        }
+    }
+}
+
+.mobile-main-nav {
+    display: none;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 0 -1rem;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: #fff;
+
+    @media (max-width: 1023px) {
+        display: flex;
+        position: fixed;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        background-color: $darkGray;
+        border: none;
+        color: $white;
+    }
+
+    ul {
+        width: 100%;
+        flex-direction: column;
+
+        li a {
+            font-size: 1.5rem;
+            line-height: 3rem;
+        }
+    }
+
+    #main-menu {
+        background-color: $gray;
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+
+        &.opened {
+            display: block;
+        }
+    }
+}

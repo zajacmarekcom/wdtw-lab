@@ -1,0 +1,44 @@
+@import '_variables.scss';
+
+#testimonials {
+    background-color: $accent;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .glide__slide {
+        max-width: 60%;
+    }
+
+    > * {
+        text-align: center;
+        color: $white;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: bold;
+
+        .signature {
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: normal;
+            margin-top: 2rem;
+        }
+    }
+
+    .slick-dots {
+        bottom: 10%;
+
+        li button { 
+            font-size: 0;
+
+            &:before {
+                color: $white;
+            }
+        }
+
+        li.slick-active button:before {
+            font-size: 10px;
+        }
+    }
+}

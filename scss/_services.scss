@@ -1,0 +1,46 @@
+#services {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 7rem;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 5rem auto 0 auto;
+    
+    @media (max-width: 1024px) {
+        padding: 2rem 2rem;
+    }
+
+    div {
+        width: 25%;
+        padding: 3rem;
+        text-align: center;
+
+        @media (max-width: 1023px) {
+            width: 50%;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 2rem;
+        }
+
+        i {
+            font-size: 4rem;
+            color: $darkGray;
+        }
+
+        h5 {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.1rem;
+            color: $darkerGray;
+        }
+
+        span {
+            font-size: 1rem;
+            color: $darkGray;
+            line-height: 1.2rem;
+        }
+    }
+}

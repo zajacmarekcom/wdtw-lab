@@ -1,0 +1,39 @@
+@import '_variables.scss';
+
+.panel {
+    text-align: center;
+    margin: 2rem auto 1rem auto;
+    width: 100%;
+
+    @media (min-width: 1024px) {  
+        margin: 5rem auto 2rem auto;
+        width: 50%;
+    }
+
+    img {
+        margin: 1rem auto;
+        max-height: 100px;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.panel-full {
+    text-align: center;
+    margin: 2rem auto 0 auto;
+    padding: 4rem 30%;
+    background-color: $gray;
+    
+    @media (max-width: 768px) {
+        padding: 2rem 3rem;
+    }
+}
+
+.panel-full-wide {
+    text-align: center;
+    margin: 5rem auto 0 auto;
+    background-color: $gray;
+}

@@ -1,0 +1,46 @@
+@import '_variables.scss';
+
+form {
+
+    div {
+        width: 100%;
+        display: flex;
+        flex-basis: 1rem;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    input, textarea {
+        background-color: $white;
+        padding: 1rem;
+        width: calc(50% - 1rem);
+        border: none;
+        display: inline-block;
+        margin: 1rem 0;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            display: block;
+        }
+
+        &:focus {
+            border: none;
+        }
+
+        &.fullwidth {
+            width: 100%;
+        }
+    }
+
+    button {
+        background-color: $accent;
+        color: $white;
+        text-transform: uppercase;
+        border: none;
+        padding: 1rem 3rem;
+        margin: 1rem 0;
+    }
+}

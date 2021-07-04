@@ -1,0 +1,105 @@
+@import '_variables.scss';
+
+.work {
+    margin-top: 4rem;
+    padding-top: 10rem;
+    padding-bottom: 0;
+    background-image: url('../img/notebook.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 767px) {  
+        margin-top: 2rem;
+        padding-top: 2rem;
+        background: none;
+    }
+
+    .skill {
+        width: 40%;
+        padding-bottom: 1rem;
+
+        &:last-of-type {
+            padding-bottom: 10rem;
+
+            @media (max-width: 767px) {  
+            padding-bottom: 5rem;
+            }
+        }
+
+        @media (max-width: 767px) {  
+            width: 100%;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            .percentage {
+                margin-left: 0.8rem;
+            }
+        }
+
+        .progress {
+            background-color: $darkGray;
+            width: 100%;
+            padding: 0;
+
+            .value {
+                background-color: $accent;
+                margin: 0;
+                height: 0.2rem;
+            }
+
+            .p75 {
+                width: 75%;
+            }
+
+            .p90 {
+                width: 90%;
+            }
+
+            .p65 {
+                width: 65%;
+            }
+        }
+    }
+}
+
+#work-done {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    width: 100%;
+    background-color: $accent;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+
+    div {
+        width: 25%;
+        display: inline-block;
+
+        @media (max-width: 767px) {
+            text-align: center;
+            width: 50%;
+        }
+
+        i {
+            font-size: 2.4rem;
+            margin: 1rem;
+        }
+
+        div {
+            display: inline-block;
+            width: 70%;
+        }
+    }
+}
